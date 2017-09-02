@@ -12,38 +12,38 @@
 
 % used in maketitle
 \title{Actividad 1}
-\author{Jennifer Judith Salgado Parra \\ Universidad de Sonora\\ Departamento de FÌsica \\}
+\author{Jennifer Judith Salgado Parra \\ Universidad de Sonora\\ Departamento de F√≠sica \\}
 \date {Septiembre 01, 2017}
 
 
 \begin{document}
 \maketitle
-\section {IntroducciÛn} En esta actividad se dar·n a conocer los comandos m·s b·sicos de linux que se han abordado durante la clase de programaciÛn y lenguaje fortran junto con un ejemplo, con el fin de dar a conocerlos a las personas que se van introduciendo en este sistema operativo.
-\\\\ Se anexar·n algunas notas que se consideren necesarias entre cada comando, al igual que wildcards/comodines.
+\section {Introducci√≥n} En esta actividad se dar√°n a conocer los comandos m√°s b√°sicos de linux que se han abordado durante la clase de programaci√≥n y lenguaje fortran junto con un ejemplo, con el fin de dar a conocerlos a las personas que se van introduciendo en este sistema operativo.
+\\\\ Se anexar√°n algunas notas que se consideren necesarias entre cada comando, al igual que wildcards/comodines.
 
-\section{Comandos} A continuaciÛn se presenta un listado de los comandos m·s b·sicos junto con un ejemplo.\\\\
+\section{Comandos} A continuaci√≥n se presenta un listado de los comandos m√°s b√°sicos junto con un ejemplo.\\\\
 %Pegar Comandos
 \textbf{1. Ls: Muestra listado de archivos y directorios.}
 \\\\\textit{Ejemplo 1.}
 \\jennifer@bash: ls -l
 \\\\\textit{Ejemplo 2. Te da un listado detallado con los permisos*.}
 \\jennifer@bash: ls -al
-\\\\\textit{*Posteriormente se abordar· el tema sobre los permisos.} \\\\
+\\\\\textit{*Posteriormente se abordar√° el tema sobre los permisos.} \\\\
 \textbf{2. Echo: Repite o muestra el valor de una variable.}
 \\\\\textit{Ejemplo 1.}
 \\jennifer@bash: echo "hola"
 \\\\\textit{Ejemplo 2. Manda caracteres a un archivo, si este existe reemplaza el contenido.}
 \\jennifer@bash: echo 123 > notas.txt
-\\\\\textit{Nota: Para el siguiente comando ver punto n˙mero 13.}
+\\\\\textit{Nota: Para el siguiente comando ver punto n√∫mero 13.}
 \\jennifer@bash: cat notas.txt
 \\123\\\\
-\textit{Ejemplo 3. Manda caracteres a un archivo de su ˙ltima lÌnea.}
+\textit{Ejemplo 3. Manda caracteres a un archivo de su √∫ltima l√≠nea.}
 \\jennifer@bash: echo 456 >> notas.txt
 \\jennifer@bash: cat notas.txt
 \\123
 \\456
 \\\\
-\textbf{3. Pwd: Nos dice en quÈ directorio nos encontramos.}
+\textbf{3. Pwd: Nos dice en qu√© directorio nos encontramos.}
 \\\\\textit{Ejemplo.}
 \\jennifer@bash: pwd
 \\/home/jennifer
@@ -58,7 +58,7 @@
 \\jennifer@bash: mkdir [nombre]
 \\jennifer@bash: mkdir ProgFortran
 \\ \\
-\textbf{Para crear m·s de un directorio}
+\textbf{Para crear m√°s de un directorio}
 \\\\\textit{Ejemplo.}
 \\jennifer@bash: mkdir [nombre 1]/ [nombre 2]/ ...
 \\jennifer@bash: mkdir Directorio1/ Directorio2/ ...
@@ -97,40 +97,40 @@
 \textit{\textbf{Notas.} Para usar el comando "vi" es necesario saber lo siguiente:}
 \begin{itemize}
 
-\item\textbf{Esc}: Para volver al modo ediciÛn.
-\item\textbf{ZZ} (may˙sculas): Guardar y salir.
-\item\textbf{:q!}: Descartar todos los cambios, desde la ˙ltima parada, y la salida.
+\item\textbf{Esc}: Para volver al modo edici√≥n.
+\item\textbf{ZZ} (may√∫sculas): Guardar y salir.
+\item\textbf{:q!}: Descartar todos los cambios, desde la √∫ltima parada, y la salida.
 \item\textbf{:w}: Guardar archivo, pero sin salir.
 \item\textbf{:wq}: De nuevo, guardar y salir.
 \item\textbf{Las teclas de flecha}: Mover el cursor alrededor.
 \item\textbf{j, k, h, l}: Mover el cursor hacia abajo, arriba, izquierda y derecha (similar a las teclas de flecha).
-\item\textbf{\^} (IntercalaciÛn): Mover el cursor al principio de la lÌnea actual.
-\item\textbf{\$}: Mover el cursor al final de la lÌnea actual.
-\item\textbf{nG}: Moverse a la n Èsima lÌnea (por ejemplo 5G mueve a quinta lÌnea).
-\item\textbf{G}: Moverse hasta la ˙ltima lÌnea.
+\item\textbf{\^} (Intercalaci√≥n): Mover el cursor al principio de la l√≠nea actual.
+\item\textbf{\$}: Mover el cursor al final de la l√≠nea actual.
+\item\textbf{nG}: Moverse a la n √©sima l√≠nea (por ejemplo 5G mueve a quinta l√≠nea).
+\item\textbf{G}: Moverse hasta la √∫ltima l√≠nea.
 \item\textbf{w}: Cambiar al comienzo de la siguiente palabra.
 \item\textbf{nw}: Avanzar n palabra (por ejemplo 2w mueve dos palabras hacia delante).
 \item\textbf{b}: Ir al principio de la palabra anterior.
-\item\textbf{NB}: Mover hacia atr·s n palabra.
-\item\textbf{\{}: Retroceder un p·rrafo.
-\item\textbf{\}}: Avanzar un p·rrafo.
-\item\textbf{x}: Borrar un solo car·cter.
+\item\textbf{NB}: Mover hacia atr√°s n palabra.
+\item\textbf{\{}: Retroceder un p√°rrafo.
+\item\textbf{\}}: Avanzar un p√°rrafo.
+\item\textbf{x}: Borrar un solo car√°cter.
 \item\textbf{nx}: Eliminar n caracteres (por ejemplo, 5x eliminaciones cinco caracteres).
-\item\textbf{dd}: Borrar la lÌnea actual.
-\item\textbf{dn}: D seguido por un comando de movimiento. Eliminar a donde el comando de movimiento que habrÌa tomado. (por ejemplo, D5W significa suprimir 5 palabras).
-\item\textbf{u}: Deshacer la ˙ltima acciÛn (es posible que siga presionando U para guardar deshacer).
-\item\textbf{U}: Deshacer todos los cambios en la lÌnea actual.
+\item\textbf{dd}: Borrar la l√≠nea actual.
+\item\textbf{dn}: D seguido por un comando de movimiento. Eliminar a donde el comando de movimiento que habr√≠a tomado. (por ejemplo, D5W significa suprimir 5 palabras).
+\item\textbf{u}: Deshacer la √∫ltima acci√≥n (es posible que siga presionando U para guardar deshacer).
+\item\textbf{U}: Deshacer todos los cambios en la l√≠nea actual.
 
 \end{itemize}
 
-\textbf{12. Cd: Permite cambiar de ubicaciÛn/directorio.}
+\textbf{12. Cd: Permite cambiar de ubicaci√≥n/directorio.}
 \\\\\textit{Ejemplo 1.}
-\\jennifer@bash: cd [nombre de directorio/ubicaciÛn]
+\\jennifer@bash: cd [nombre de directorio/ubicaci√≥n]
 \\jennifer@bash: cd ProgFortran
 \\\\\textit{Ejemplo 2. Para cambiarnos al directorio padre indicamos ".."}
 \\jennifer@bash: cd ..
 \\ \\
-\textbf{13. Cat: Muestra el contenido de archivos y adem·s los puede concatenar.}
+\textbf{13. Cat: Muestra el contenido de archivos y adem√°s los puede concatenar.}
 \\\\\textit{Ejemplo 1. Para visualizar.}
 \\jennifer@bash: cat notas.txt
 \\123
@@ -141,14 +141,14 @@
 \\123
 \\456
 \\\\
-\textbf{14. Less: Muestra el contenido de archivos al igual que el comando ëcatí, pero este permite visualizar archivos m·s largos.}
+\textbf{14. Less: Muestra el contenido de archivos al igual que el comando ‚Äòcat‚Äô, pero este permite visualizar archivos m√°s largos.}
 \\\\\textit{Ejemplo.}
 \\jennifer@bash: less archivolargo.txt
 \\\\
 \textbf{15. Chmod: Cambia los permisos de un archivo o directorio.}
 \\\\\textit{Ejemplo.}
 \\jennifer@bash: chmod [Ugoa] [+-] [rwx] [archivo]
-\\jennifer@bash: chmod o ñ w notas.txt
+\\jennifer@bash: chmod o ‚Äì w notas.txt
 \\\\\textit{En el primer corchete U significa usuario, g significa grupo, o significa otros, a significa todos; en el segundo corchete + significa conceder y - significa revocar; en el tercer corchete r significa leer (read), w significa escribir (write), x significa ejecutar.}
 \\\textit{Nota: El comando "ls -ld" muestra los permisos de un directorio especifico.}
 \\\\
@@ -160,17 +160,17 @@
 \\\\\textit{Ejemplo.}
 \\jennifer@bash: clear
 \\\\
-\textbf{18. Emacs: Crea notas y las ejecuta, permitiendo asÌ editarlas.}
+\textbf{18. Emacs: Crea notas y las ejecuta, permitiendo as√≠ editarlas.}
 \\\\\textit{Ejemplo.}
 \\jennifer@bash: emacs nuevanota.txt\\\\
 
-\textbf{\textit{Notas. Conjunto b·sico de wildcards/comodines}}\\
-\textbf{*} - representa cero o m·s caracteres\\
-\textbf{?} - representa un solo car·cter\\
+\textbf{\textit{Notas. Conjunto b√°sico de wildcards/comodines}}\\
+\textbf{*} - representa cero o m√°s caracteres\\
+\textbf{?} - representa un solo car√°cter\\
 \textbf{[ ]} - representa un rango de caracteres
 
-\section{ConclusiÛn}
-Hasta este perÌodo lo abordado ha sido f·cil de entender y en relaciÛn con todos los comandos vistos y explicados anteriormente en la clase de programaciÛn y lenguaje fortran, he determinado que Èstos no son nada m·s que otro lenguaje, el cual sirve para comunicar; entenderse. En este caso: una persona comunicar· una orden a una computadora a travÈs de la terminal usando los comandos (lenguaje).
+\section{Conclusi√≥n}
+Hasta este per√≠odo lo abordado ha sido f√°cil de entender y en relaci√≥n con todos los comandos vistos y explicados anteriormente en la clase de programaci√≥n y lenguaje fortran, he determinado que √©stos no son nada m√°s que otro lenguaje, el cual sirve para comunicar; entenderse. En este caso: una persona comunicar√° una orden a una computadora a trav√©s de la terminal usando los comandos (lenguaje).
 
 
 \end{document}
