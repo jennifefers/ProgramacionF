@@ -1,0 +1,176 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+% used in maketitle
+\title{Actividad 1}
+\author{Jennifer Judith Salgado Parra \\ Universidad de Sonora\\ Departamento de Física \\}
+\date {Septiembre 01, 2017}
+
+
+\begin{document}
+\maketitle
+\section {Introducción} En esta actividad se darán a conocer los comandos más básicos de linux que se han abordado durante la clase de programación y lenguaje fortran junto con un ejemplo, con el fin de dar a conocerlos a las personas que se van introduciendo en este sistema operativo.
+\\\\ Se anexarán algunas notas que se consideren necesarias entre cada comando, al igual que wildcards/comodines.
+
+\section{Comandos} A continuación se presenta un listado de los comandos más básicos junto con un ejemplo.\\\\
+%Pegar Comandos
+\textbf{1. Ls: Muestra listado de archivos y directorios.}
+\\\\\textit{Ejemplo 1.}
+\\jennifer@bash: ls -l
+\\\\\textit{Ejemplo 2. Te da un listado detallado con los permisos*.}
+\\jennifer@bash: ls -al
+\\\\\textit{*Posteriormente se abordará el tema sobre los permisos.} \\\\
+\textbf{2. Echo: Repite o muestra el valor de una variable.}
+\\\\\textit{Ejemplo 1.}
+\\jennifer@bash: echo "hola"
+\\\\\textit{Ejemplo 2. Manda caracteres a un archivo, si este existe reemplaza el contenido.}
+\\jennifer@bash: echo 123 > notas.txt
+\\\\\textit{Nota: Para el siguiente comando ver punto número 13.}
+\\jennifer@bash: cat notas.txt
+\\123\\\\
+\textit{Ejemplo 3. Manda caracteres a un archivo de su última línea.}
+\\jennifer@bash: echo 456 >> notas.txt
+\\jennifer@bash: cat notas.txt
+\\123
+\\456
+\\\\
+\textbf{3. Pwd: Nos dice en qué directorio nos encontramos.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: pwd
+\\/home/jennifer
+\\ \\
+\textbf{4. Man: Manual para comandos.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: man [comando]
+\\jennifer@bash: man ls
+\\ \\
+\textbf{5. Mkdir: Crea directorios.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: mkdir [nombre]
+\\jennifer@bash: mkdir ProgFortran
+\\ \\
+\textbf{Para crear más de un directorio}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: mkdir [nombre 1]/ [nombre 2]/ ...
+\\jennifer@bash: mkdir Directorio1/ Directorio2/ ...
+\\\\\textit{Nota: Es importante tomar en cuenta cada espacio.}
+\\ \\
+\textbf{6. Rm: Remover/eliminar archivos.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: rm hola.txt
+\\ \\
+\textbf{7. Rmdir: Remover/eliminar directorios.}
+\\\\\textit{Ejemplo 1.}
+\\jennifer@bash: rmdir ProgFortran
+\\\\\textit{Ejemplo 2. Remover directorios junto con archivos contenidos.}
+\\jennifer@bash: rm -r  Musica
+\\ \\
+\textbf{8. Cp: Copia de un archivo o directorio.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: cp [origen del archivo] [destino]
+\\jennifer@bash: cp prueba/prueba1.txt Documentos
+\\ \\
+\textbf{9. Mv: Mueve un archivo o directorio.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: mv [origen del archivo] [destino]
+\\jennifer@bash: mv prueba/prueba1.txt Documentos
+\\ \\
+\textbf{10.  Touch: Crea un archivo en blanco.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: touch [nombre del archivo]
+\\jennifer@bash: touch notas.txt
+\\ \\
+\textbf{11. Vi: Permite editar archivos y si no existe, lo crea.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: vi notas.txt\\
+
+
+\textit{\textbf{Notas.} Para usar el comando "vi" es necesario saber lo siguiente:}
+\begin{itemize}
+
+\item\textbf{Esc}: Para volver al modo edición.
+\item\textbf{ZZ} (mayúsculas): Guardar y salir.
+\item\textbf{:q!}: Descartar todos los cambios, desde la última parada, y la salida.
+\item\textbf{:w}: Guardar archivo, pero sin salir.
+\item\textbf{:wq}: De nuevo, guardar y salir.
+\item\textbf{Las teclas de flecha}: Mover el cursor alrededor.
+\item\textbf{j, k, h, l}: Mover el cursor hacia abajo, arriba, izquierda y derecha (similar a las teclas de flecha).
+\item\textbf{\^} (Intercalación): Mover el cursor al principio de la línea actual.
+\item\textbf{\$}: Mover el cursor al final de la línea actual.
+\item\textbf{nG}: Moverse a la n ésima línea (por ejemplo 5G mueve a quinta línea).
+\item\textbf{G}: Moverse hasta la última línea.
+\item\textbf{w}: Cambiar al comienzo de la siguiente palabra.
+\item\textbf{nw}: Avanzar n palabra (por ejemplo 2w mueve dos palabras hacia delante).
+\item\textbf{b}: Ir al principio de la palabra anterior.
+\item\textbf{NB}: Mover hacia atrás n palabra.
+\item\textbf{\{}: Retroceder un párrafo.
+\item\textbf{\}}: Avanzar un párrafo.
+\item\textbf{x}: Borrar un solo carácter.
+\item\textbf{nx}: Eliminar n caracteres (por ejemplo, 5x eliminaciones cinco caracteres).
+\item\textbf{dd}: Borrar la línea actual.
+\item\textbf{dn}: D seguido por un comando de movimiento. Eliminar a donde el comando de movimiento que habría tomado. (por ejemplo, D5W significa suprimir 5 palabras).
+\item\textbf{u}: Deshacer la última acción (es posible que siga presionando U para guardar deshacer).
+\item\textbf{U}: Deshacer todos los cambios en la línea actual.
+
+\end{itemize}
+
+\textbf{12. Cd: Permite cambiar de ubicación/directorio.}
+\\\\\textit{Ejemplo 1.}
+\\jennifer@bash: cd [nombre de directorio/ubicación]
+\\jennifer@bash: cd ProgFortran
+\\\\\textit{Ejemplo 2. Para cambiarnos al directorio padre indicamos ".."}
+\\jennifer@bash: cd ..
+\\ \\
+\textbf{13. Cat: Muestra el contenido de archivos y además los puede concatenar.}
+\\\\\textit{Ejemplo 1. Para visualizar.}
+\\jennifer@bash: cat notas.txt
+\\123
+\\456
+\\\\\textit{Ejemplo 2. Para concatenar.}
+\\jennifer@bash: cat notas.txt >> ejercicio1.txt
+\\jennifer@bash: cat ejercicio1.txt
+\\123
+\\456
+\\\\
+\textbf{14. Less: Muestra el contenido de archivos al igual que el comando ‘cat’, pero este permite visualizar archivos más largos.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: less archivolargo.txt
+\\\\
+\textbf{15. Chmod: Cambia los permisos de un archivo o directorio.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: chmod [Ugoa] [+-] [rwx] [archivo]
+\\jennifer@bash: chmod o – w notas.txt
+\\\\\textit{En el primer corchete U significa usuario, g significa grupo, o significa otros, a significa todos; en el segundo corchete + significa conceder y - significa revocar; en el tercer corchete r significa leer (read), w significa escribir (write), x significa ejecutar.}
+\\\textit{Nota: El comando "ls -ld" muestra los permisos de un directorio especifico.}
+\\\\
+\textbf{16. History: Muestra el historial de comandos utilizados.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: history
+\\\\
+\textbf{17. Clear: Limpia la terminal.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: clear
+\\\\
+\textbf{18. Emacs: Crea notas y las ejecuta, permitiendo así editarlas.}
+\\\\\textit{Ejemplo.}
+\\jennifer@bash: emacs nuevanota.txt\\\\
+
+\textbf{\textit{Notas. Conjunto básico de wildcards/comodines}}\\
+\textbf{*} - representa cero o más caracteres\\
+\textbf{?} - representa un solo carácter\\
+\textbf{[ ]} - representa un rango de caracteres
+
+\section{Conclusión}
+Hasta este período lo abordado ha sido fácil de entender y en relación con todos los comandos vistos y explicados anteriormente en la clase de programación y lenguaje fortran, he determinado que éstos no son nada más que otro lenguaje, el cual sirve para comunicar; entenderse. En este caso: una persona comunicará una orden a una computadora a través de la terminal usando los comandos (lenguaje).
+
+
+\end{document}
