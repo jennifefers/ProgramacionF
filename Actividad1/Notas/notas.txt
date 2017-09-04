@@ -1,0 +1,113 @@
+		COMANDOS 
+Notas: 
+Conjunto básico de comodines
+* - representa cero o más caracteres
+? - representa un solo carácter
+[] - representa un rango de caracteres
+
+1. ls  // Muestra listado de archivos y directorios.
+       Ej. jennifer@ltsp21:~$ ls -l
+
+2. echo // Repite o muestra el valor de una variable
+   	Ej1. jennifer@ltsp21:~$ echo "hola"
+	Ej2. jennifer@ltsp21:~$ echo $SHELL
+	Ej3. (Manda caracteres a un archivo)
+	
+jennifer@ltsp21:~$ echo 123 > notas.txt
+jennifer@ltsp21:~$ cat notas.txt
+123
+jennifer@ltsp21:~$ echo 456 >> notas.txt
+jennifer@ltsp21:~$ cat notas.txt
+123
+456
+
+3. pwd // Nos dice en qué directorio nos encontramos.
+       Ej. jennifer@ltsp21:~$ pwd
+       	   /home/jennifer
+
+4. man // Manual para comandos 
+       Ej1.   jennifer@ltsp21:~$ man [comando]
+jennifer@ltsp21:~$ man ls
+
+5. mkdir // Crea directorios
+   	 Ej1.  jennifer@ltsp21:~$ mkdir [nombre]
+jennifer@ltsp21:~$ mkdir ProgFortran
+
+	 // Para crear más de un directorio
+	 Ej. jennifer@ltsp21:~$ mkdir Directorio1/ Directorio2/ ...
+	 
+6. rm // Remover/eliminar archivos
+      Ej. jennifer@ltsp21:~$ rm hola.txt
+
+7. rmdir // Remover/eliminar directorios
+   	 Ej. jennifer@ltsp21:~$ rmdir ProgFortran
+rm -r // Remover directorios junto con archivos contenidos
+	Ej. jennifer@ltsp21:~$ rm -r  Musica
+
+8. cp // Copia de un archivo o directorio
+      Ej. jennifer@ltsp21:~$ cp [origen del archivo] [destino]
+      	  jennifer@ltsp21:~$ cp prueba/prueba1.txt Documentos
+
+9. mv // Mueve un archivo o directorio
+      Ej. jennifer@ltsp21:~$ mv [origen del archivo] [destino]
+      	  jennifer@ltsp21:~$ mv ~prueba/prueba1.txt .
+	 
+
+10.  touch // Crea un archivo en blanco
+	Ej. jennifer@ltsp21:~$ touch [nombre del archivo]
+		jennifer@ltsp21:~$ touch notas.txt
+
+11. vi // Permite editar archivos y si no existe, lo crea. 
+	Ej. jennifer@ltsp21:~$ vi notas.txt
+*Notas: 
+Esc – para volver al modo edición
+ZZ (mayúsculas) - Guardar y salir
+:q! - descartar todos los cambios, desde la última parada, y la salida
+:w - guardar archivo, pero sin salir
+:wq - de nuevo, guardar y salir
+Las teclas de flecha - mover el cursor alrededor
+j, k, h, l - mover el cursor hacia abajo, arriba, izquierda y derecha (similar a las teclas de flecha)
+^ (Intercalación) - mover el cursor al principio de la línea actual
+$ - mover el cursor al final de la línea actual
+nG - moverse a la n ésima línea (por ejemplo 5G mueve a quinta línea)
+G - moverse hasta la última línea
+w - cambiar al comienzo de la siguiente palabra
+nw - avanzar n palabra (por ejemplo 2w mueve dos palabras hacia delante)
+b - ir al principio de la palabra anterior
+NB - mover hacia atrás n palabra
+{ - retroceder un párrafo
+} - avanzar un párrafo
+x - borrar un solo carácter
+nx - eliminar n caracteres (por ejemplo, 5x eliminaciones cinco caracteres)
+dd - borrar la línea actual
+dn - D seguido por un comando de movimiento. Eliminar a donde el comando de movimiento que habría tomado. (por ejemplo, D5W significa suprimir 5 palabras)
+u - Deshacer la última acción (es posible que siga presionando U para guardar deshacer)
+U - Deshacer todos los cambios en la línea actual
+
+12. cd // Permite cambiar de ubicación/directorio
+	Ej. jennifer@ltsp21:~$ cd ProgFortran
+	Ej. jennifer@ltsp21:~$ cd ..
+
+13. cat // Muestra el contenido de archivos y los puede concatenar.
+	Ej. jennifer@ltsp21:~$ cat notas.txt
+		123
+		456
+	Ej. jennifer@ltsp21:~$ cat notas.txt >> ejercicio1.txt
+
+14. less // Muestra el contenido de archivos al igual que el comando ‘cat’, pero este permite visualizar 	archivos mas largos.
+	Ej. jennifer@ltsp21:~$ less notas.txt
+
+15. chmod // Cambia los permisos de un archivo o directorio. 
+	Ej. jennifer@ltsp21:~$ chmod [Ugoa] [+-] [rwx] [archivo]
+		jennifer@ltsp21:~$ chmod o – w notas.txt
+
+	ls -ld //Muestra los permisos de un directorio especifico. 
+
+16. history // Muestra el historial de comandos utilizados
+	Ej. jennifer@ltsp21:~$ history
+
+17. clear // Limpia la terminal
+	Ej. jennifer@ltsp21:~$ clear
+
+18. Emacs // Crea notas y las ejecuta
+	Ej. jennifer@ltsp21:~$ emacs nuevanota.txt
