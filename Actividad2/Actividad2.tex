@@ -1,0 +1,76 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+% used in maketitle
+\title{Actividad 2}
+\author{Jennifer Judith Salgado Parra \\ Universidad de Sonora\\ Departamento de Física \\}
+\date {Septiembre 11, 2017}
+
+\begin{document}
+\maketitle
+\section{Movimiento de Proyectiles}
+
+\subsection {Definición}
+El movimiento del proyectil es una forma de movimiento en la que un objeto o partícula (en cualquier caso denominado proyectil ) se lanza cerca de la superficie de la Tierra, y se mueve a lo largo de un camino curvo bajo la acción de la gravedad solamente, donde la resistencia del aire no se toma en cuenta.
+
+\subsection{La velocidad inicial}
+Ésta podemos expresarla como la suma de componentes horizontales y verticales, de esta manera:\[v_{0}=v_{0x}i + v_{0y}j\]
+En caso que queramos encontrar las componentes, es necesario contar con el ángulo inicial \(\theta\) y la velocidad inicial \(v_{0}\), para así utilizar las siguientes fórmulas. \[v_{0x}=v_{0}cos\theta\]\[v_{0y}=v_{0}sen\theta\]
+
+En caso que necesitemos encontrar la velocidad inicial, teniendo la posición del proyectil (x,y) y el ángulo de lanzamiento \(\theta\), se utilizará la siguiente fórmula:\[v_{0}=\sqrt{\frac{x^2g}{xSen(2\theta)-2yCos^2(\theta)}}\]
+
+\subsection{Aceleración}
+Dado que sólo hay aceleración en la dirección vertical (trarándose de un movimiento en caída libre); la velocidad en la dirección horizontal es constante. Siendo así: \[a_{x}=0\]\[a_{y}=-g\]
+
+\subsection{Velocidad}
+La magnitud de la velocidad dada por el teorema de pitágoras se definirá de la siguiente forma:
+\[v={\sqrt{v^2_{x}+v^2_{y}}}\]
+
+\subsection{Desplazamiento}
+En cualquier momento t, el desplazamiento horizontal y vertical del proyectil son:\[x=v_{0} t cos(\theta)\]
+\[y=v_{0} t sen(\theta)-\frac{1}{2}gt^2 \]
+
+\subsection{Tiempo de vuelo}
+El tiempo total t para el cual el proyectil permanece en el aire se llama el tiempo de  vuelo y está determinado con la siguiente fórmula \[t=\frac{2v_{0}sen(\theta)}{g}\]
+
+\subsubsection{Ejemplo} Un hombre lanza una pelota con un ángulo de \(\theta=25\)$^{\circ}$ a una rapidez de 8 m/s. ¿Cuánto tiempo permanece la pelota en el aire?\\\\
+Sustituimos en la ecuación \[t=\frac{2\cdot 8 sen(20)}{9.8}\approx 0.558 s\]
+
+\subsection{Altura máxima del proyectil}
+La altura máxima que el objeto alcanzará será cuando \(v_{y}=0\) y está dada por la siguiente fórmula
+\[h=\frac{v^2_{0}sen^2(\theta)}{2g}\]
+Por otra parte, si queremos encontrar el tiempo para alcanzar la altura máxima, basta con igualar a cero la ecuación del desplazamiento en \textit{y}, y despejar \textit{t}, quedándonos así\[t_{h}=\frac{v_{0}sen(\theta)}{g}\]
+
+\subsubsection{Ejemplo} Un hombre lanza una pelota con un ángulo de \(\theta=25\)$^{\circ}$ a una rapidez de 8 m/s. ¿En qué altura su velocidad es cero?\\\\
+Sustituimos en la ecuación \[h=\frac{8^2 \cdot sen^2(25)}{2 \cdot 9.8} \approx 0.381 m\]
+
+\subsection{Distancia máxima del proyectil}
+Hemos de notar que para encontrar el rango horizontal del proyectil es cuando la altura en \textit{y} vuelve a ser cero. Por lo tanto, igualamos a cero la ecuación en desplazamiento en \textit{y}.
+\[0=v_{0} t_{d} sen(\theta)-\frac{1}{2}gt^2_{d}\]
+Despejamos \textit{\(t_{d}\)}, tiempo en el que se realizó la distancia máxima recorrida del proyectil. \[t_{d}=\frac{v_{0}sen(\theta)}{g}\]
+Teniendo el tiempo en el que realizó el proyectil todo el recorrido, sustituimos en la ecuación de desplazamiento en \textit{x}.
+\[d=v_{0}t_{d}cos(\theta)\]
+Utilizando la identidad trigonométrica \textit{\(2\cdot sen(\theta)\cdot cos(\theta)=sen(2\theta)\)} nos queda que:
+\[d=\frac{v^2_{0}sen(2\theta)}{g}\]
+
+\subsubsection{Ejemplo} Un hombre lanza una pelota con un ángulo de \(\theta=25\)$^{\circ}$ a una rapidez de 8 m/s. ¿Qué distancia recorre la pelota?\\\\
+Sustituimos en la ecuación \[d=\frac{8^2 \cdot sen(2 \cdot 20)}{9.8} \approx 4.197 m\]
+
+\section{Bibliografía}
+\begin{thebibliography}{a}
+
+\bibitem{wiki} \textsc{Wikipedia.}(Agosto 31, 2017). Movimiento de proyectiles.2017, de Fundación Wikimedia, Inc. Sitio web: \textit{https://en.wikipedia.org/wiki/Projectile\_motion}
+
+\end{thebibliography}
+
+
+\end{document}
